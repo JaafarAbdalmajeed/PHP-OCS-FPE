@@ -107,13 +107,40 @@ Handle any errors gracefully. -->
 
 <?php
     echo "<br>";
+    $var = "amman";
+    // unset($var);
+    if(isset($var)){
+        echo $var;
+    } else {
+        echo "no set";
+    }
+    isset($var)
 ?>
 
 <!-- Problem 8: Array Operations
 Create a PHP function that takes two arrays as input and outputs the intersection of the arrays (common elements). -->
 
 <?php
-    echo "<br>";
+function intersectionArray($arr1, $arr2) {
+    $lenArr1 = count($arr1);
+    $lenArr2 = count($arr2);
+    $intersection = array();
+
+    for ($i = 0; $i < $lenArr1; $i++) {
+        foreach ($arr2 as $value) {
+            if ($arr1[$i] == $value) {
+                array_push($intersection, $value);
+            }
+        }
+    }
+    echo "<pre>";
+    print_r($intersection);
+    echo "</pre>";
+}
+
+$array1 = array(1, 2, 3, 4, 5, 6, 43, 62, 59, 21);
+$array2 = array(5, 6, 3, 87, 4, 3, 21, 45, 23, 59);
+intersectionArray($array1, $array2);
 ?>
 
 <!-- Problem 9: Typecasting
