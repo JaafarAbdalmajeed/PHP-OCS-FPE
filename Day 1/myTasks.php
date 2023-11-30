@@ -89,7 +89,7 @@ Output whether they are equal or not.-->
 Create a PHP script that takes an array as input and outputs the data type of each element in the array.-->
 
 <?php 
-
+    echo "<br>";
     function dataTypeIdentification($arr) {
         $arrTypes = array();
         foreach($arr as $value) {
@@ -101,4 +101,33 @@ Create a PHP script that takes an array as input and outputs the data type of ea
 
 ?>
 
-<!--  -->
+<!-- Problem 7: Unset Variable
+Write a PHP script that defines a variable, unsets it, and then tries to output its value. 
+Handle any errors gracefully. -->
+
+<?php
+    echo "<br>";
+?>
+
+<!-- Problem 8: Array Operations
+Create a PHP function that takes two arrays as input and outputs the intersection of the arrays (common elements). -->
+
+<?php
+    echo "<br>";
+?>
+
+<!-- Problem 9: Typecasting
+Write a PHP script that takes a string representing a number and converts it to an actual numeric value. 
+Output the original string and the converted numeric value. -->
+
+<?php
+    echo "<br>";
+?>
+
+<!-- Problem 10: Null Coalescing
+Create a PHP script that uses the null coalescing operator (??) to provide a default value if a variable is set to null. 
+Output the result. -->
+
+<?php
+    echo "<br>";
+?>
