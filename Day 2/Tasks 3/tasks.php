@@ -179,6 +179,7 @@ Sample Word: 'Our'
 Expected Result: the new trainee is so genius. -->
 
 <?php 
+
     echo "<br>";
     $inputSentence = 'That new trainee is so genius.';
     $inputWord = 'Our';
