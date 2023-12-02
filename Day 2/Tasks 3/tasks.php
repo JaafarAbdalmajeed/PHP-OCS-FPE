@@ -339,6 +339,12 @@ Expected Output: 2543.12 -->
 
 <?php 
 echo "<br>";
+$input = '2,543.12';
+$len = strlen($input);
+
+    str_replace(',', '', $input );
+
+echo $input;
 echo "<br>";
 ?>
 
