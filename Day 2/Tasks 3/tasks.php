@@ -335,7 +335,6 @@ $output = '';
 for ($i = 0; $i < 5; $i++) {
     array_push($arrInput[$i], $output);
 }
-
 $str =  join(' ', $output);
 echo $str;
 echo "<br>";
