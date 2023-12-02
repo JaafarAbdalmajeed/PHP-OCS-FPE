@@ -179,8 +179,14 @@ Sample Word: 'Our'
 Expected Result: the new trainee is so genius. -->
 
 <?php 
-echo "<br>";
-echo "<br>";
+    echo "<br>";
+    $inputSentence = 'That new trainee is so genius.';
+    $inputWord = 'Our';
+    $arrayWords = explode(' ',$inputSentence);
+    $arrayWords[0] = $inputWord; 
+    $output = join(' ',$arrayWords);
+    echo $output;
+    echo "<br>";
 ?>
 
 
