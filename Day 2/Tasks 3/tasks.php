@@ -63,7 +63,7 @@ Expected Output: ‘Word Found!’ -->
         if($arrWords[$i] == $word) {
             echo "‘Word Found’";
         } else {
-            echo "not Found’"
+            echo "not Found’";
         }
     }
     
