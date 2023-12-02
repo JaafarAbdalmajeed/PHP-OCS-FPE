@@ -5,7 +5,27 @@ b.	Convert the entered string to lowercase.
 c.	Make the first letter of the string uppercase.
 d.	Make the first letter of each word capitalized. -->
 
-<?php ?>
+<!-- a. -->
+<?php 
+    $word = 'amman';
+    $word = strtoupper($word);
+?>
+<!-- b. -->
+<?php 
+    $word = 'AMMAN';
+    $word =  strtolower($word);
+?>
+<!-- c. -->
+<?php 
+    $word = 'jordan';
+    $word = ucfirst($word);
+
+?>
+<!-- d. -->
+<?php 
+    $word = 'jordan';
+    $word = ucwords($word);
+?>
 
 
 
