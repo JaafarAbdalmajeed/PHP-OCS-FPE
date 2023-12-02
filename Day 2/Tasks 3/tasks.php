@@ -320,7 +320,7 @@ echo "<br>";
     $s1 = '"\1+2/3*2:2-3/4*3';
     $s2 = '';
 for( $i = 0; $i < strlen($s1); $i++) {
-if(is_numeric($s[$i])){
+if(is_numeric($s1[$i])){
     $s2 .= $s1[$i].' ';
 }
 }
