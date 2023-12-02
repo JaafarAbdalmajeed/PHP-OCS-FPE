@@ -200,6 +200,15 @@ Expected Result : First difference between two strings at position 7: "a" vs "o"
 
 <?php 
 echo "<br>";
+function compareWords($word1, $word2) {
+    $len = min(strlen($word1), strlen($word2));
+        for($i = 0 ; $i < $len ; $i++) {
+            if($word1[$i] !== $word2[$i]){
+            echo "First difference between two strings at position $i: $word1[$i] vs $word2[$i]";
+            break;
+            }
+        }
+    }
 echo "<br>";
 ?>
 
