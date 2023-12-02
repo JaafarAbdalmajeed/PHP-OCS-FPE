@@ -157,7 +157,6 @@ function generateRandomPassword($characters,$lenPass) {
         $randomIndex = random_int(0, $charLength - 1);
         $password .= $characters[$randomIndex];
     }
-
     return $password;
 }
 
