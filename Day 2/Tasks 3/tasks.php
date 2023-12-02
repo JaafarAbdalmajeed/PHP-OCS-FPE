@@ -131,6 +131,12 @@ Sample Output: 'info@orange.com'
 Expected Output: 'com' -->
 <?php 
 echo "<br>";
+    function lastThree($strings) {
+        $output = substr($strings, -3);
+        echo $output;
+    }
+    lastThree('info@orange.com');
+echo "<br>";
 ?>
 
 
@@ -143,7 +149,30 @@ Expected Output: 254ABCc or h242sfeDAFEe32  -> random number  -->
 
 <?php 
 echo "<br>";
+function generateRandomPassword($characters,$lenPass) {
+    $password = '';
+    $charLength = strlen($characters);
+
+    for ($i = 0; $i < $lenPass; $i++) {
+        $randomIndex = random_int(0, $charLength - 1);
+        $password .= $characters[$randomIndex];
+    }
+
+    return $password;
+}
+
+$characterSet = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+
+    $lenPass = rand(0,12);
+$randomPassword = generateRandomPassword($characterSet, $lenPass);
+
+echo "Generated Password: $randomPassword";
+
+echo "<br>";
 ?>
+
+
+
 <!-- 8.	Write a PHP script to replace the first word of the sentence with another word.
 
 Sample Output: 'That new trainee is so genius.'
