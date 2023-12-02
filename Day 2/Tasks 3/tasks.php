@@ -306,6 +306,13 @@ Expected Output: 'The quick brown fox jumps over the lazy dog' -->
 
 <?php 
 echo "<br>";
+$s1 = 'The quick brown fox jumps over the lazy dog---';
+
+for( $i = 0; $i < strlen($s1); $i++) {
+if( $s1[$i] == '-' ) {
+str_replace('-','', $s1[$i]);
+}
+}
 echo "<br>";
 ?>
 
