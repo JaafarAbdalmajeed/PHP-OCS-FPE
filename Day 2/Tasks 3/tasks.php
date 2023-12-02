@@ -238,6 +238,20 @@ Sample Character: 'z'
 Expected Output: 'a' -->
 <?php 
 echo "<br>";
+
+$alphabetArray = range('a', 'z');
+$input = 'z';
+
+for ($i = 0; $i < 26; $i++) {
+    if ($input == $alphabetArray[$i] && $i < 25) {
+        echo $alphabetArray[$i + 1];
+        break;
+    } elseif ($input == $alphabetArray[$i] && $i == 25) {
+        
+        echo 'a';
+        break;
+    }
+}
 echo "<br>";
 ?>
 
