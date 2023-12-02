@@ -104,7 +104,24 @@ echo "<br>";
 
 Sample Output: 'info@orange.com'
 Expected Output: 'info' -->
-<?php ?>
+<?php 
+    echo "<br>";
+
+function extractUsername($email) {
+    $name = '';
+    $len = strlen($email);
+    for($i = 0; $i < $len ; $i++) {
+        if($email[$i] === '@'){
+            break;
+        } else {
+            $name .= $email[$i];
+        }
+    }
+    echo $name;
+}
+extractUsername('info@orange.com');
+    echo "<br>";
+?>
 
 
 
@@ -112,7 +129,9 @@ Expected Output: 'info' -->
 
 Sample Output: 'info@orange.com'
 Expected Output: 'com' -->
-<?php ?>
+<?php 
+echo "<br>";
+?>
 
 
 
@@ -122,14 +141,19 @@ Sample Output: '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz'
 
 Expected Output: 254ABCc or h242sfeDAFEe32  -> random number  -->
 
-<?php ?>
+<?php 
+echo "<br>";
+?>
 <!-- 8.	Write a PHP script to replace the first word of the sentence with another word.
 
 Sample Output: 'That new trainee is so genius.'
 Sample Word: 'Our'
 Expected Result: the new trainee is so genius. -->
 
-<?php ?>
+<?php 
+echo "<br>";
+echo "<br>";
+?>
 
 
 
@@ -139,7 +163,10 @@ String1 : 'dragonball'
 String2 : 'dragonboll'
 Expected Result : First difference between two strings at position 7: "a" vs "o" -->
 
-<?php ?>
+<?php 
+echo "<br>";
+echo "<br>";
+?>
 
 
 
@@ -147,7 +174,10 @@ Expected Result : First difference between two strings at position 7: "a" vs "o"
 
 Sample Output: "Twinkle, twinkle, little star."
 Expected Result: array (4) {[0] => string (30) "Twinkle, " [1] => string (26) " twinkle," [2] => string (27) twinkle" [3] => string (26) " little star.”} -->
-<?php ?>
+<?php 
+echo "<br>";
+echo "<br>";
+?>
 
 
 
@@ -159,7 +189,10 @@ Sample Character: 'a'
 Expected Output: 'b'
 Sample Character: 'z'
 Expected Output: 'a' -->
-<?php ?>
+<?php 
+echo "<br>";
+echo "<br>";
+?>
 
 
 
@@ -172,7 +205,10 @@ Expected Output: 'The quick brown fox'
 Original String: 'The quick brown fox'
 Expected Output: 'The' -->
 
-<?php ?>
+<?php 
+echo "<br>";
+echo "<br>";
+?>
 
 
 
@@ -182,7 +218,10 @@ Original String: '0000657022.24'
 Expected Output: '65722.24' -->
 
 
-<?php ?>
+<?php 
+echo "<br>";
+echo "<br>";
+?>
 
 
 <!-- 14.	Write a PHP script to remove part of a string. 
@@ -190,7 +229,10 @@ Expected Output: '65722.24' -->
 Original String: 'The quick brown fox jumps over the lazy dog'
 Remove 'fox' from the above string.
 Expected Output: 'The quick brown jumps over the lazy dog' -->
-<?php ?>
+<?php 
+echo "<br>";
+echo "<br>";
+?>
 
 
 
@@ -201,7 +243,10 @@ Expected Output: 'The quick brown jumps over the lazy dog' -->
 Original String: 'The quick brown fox jumps over the lazy dog---'
 Expected Output: 'The quick brown fox jumps over the lazy dog' -->
 
-<?php ?>
+<?php 
+echo "<br>";
+echo "<br>";
+?>
 
 
 <!-- 16.	Write a PHP script to remove Special characters from the following string. 
@@ -209,7 +254,10 @@ Expected Output: 'The quick brown fox jumps over the lazy dog' -->
 Sample Output: '\"\1+2/3*2:2-3/4*3'
 Expected Output: '1 2 3 2 2 3 4 3' -->
 
-<?php ?>
+<?php 
+echo "<br>";
+echo "<br>";
+?>
 
 
 <!-- 17.	Write a PHP script to select first 5 words from the following string. 
@@ -217,7 +265,10 @@ Expected Output: '1 2 3 2 2 3 4 3' -->
 Sample Output: 'The quick brown fox jumps over the lazy dog'
 Expected Output: 'The quick brown fox jumps' -->
 
-<?php ?>
+<?php 
+echo "<br>";
+echo "<br>";
+?>
 
 
 <!-- 18.	Write a PHP script to remove comma(s) from the following numeric string.
@@ -225,11 +276,17 @@ Expected Output: 'The quick brown fox jumps' -->
 Sample Output: '2,543.12'
 Expected Output: 2543.12 -->
 
-<?php ?>
+<?php 
+echo "<br>";
+echo "<br>";
+?>
 
 
 <!-- 19.	Write a PHP script to print letters from 'a' to 'z'. 
 Expected Output: a b c d e f g h I j k l m n o p q r s t u v w x y z  -->
 
 
-<?php ?>
+<?php 
+echo "<br>";
+echo "<br>";
+?>
