@@ -55,7 +55,24 @@ echo $timeFormat;
 Sample Output: ‘I am a full stack developer at orange coding academy’
 Sample Word: ‘Orange’
 Expected Output: ‘Word Found!’ -->
-<?php ?>
+<?php 
+    echo "<br>";
+    function check($sentence, $word) {
+    $arrWords = explode(' ', $sentence);
+    for($i = 0; $i < count($arrWords); $i++) {
+        if($arrWords[$i] == $word) {
+            echo "‘Word Found’";
+        } else {
+            echo "not Found’"
+        }
+    }
+    
+    }
+    
+    check("I am a full stack developer at orange coding academy", "orane");
+
+    echo "<br>";
+?>
 
 
 
