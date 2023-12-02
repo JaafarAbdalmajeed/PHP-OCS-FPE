@@ -326,8 +326,18 @@ echo "<br>";
 Sample Output: 'The quick brown fox jumps over the lazy dog'
 Expected Output: 'The quick brown fox jumps' -->
 
-<?php 
+<?php
 echo "<br>";
+$input = 'The quick brown fox jumps over the lazy dog';
+$arrInput = explode(' ', $input);
+$output = '';
+
+for ($i = 0; $i < 5; $i++) {
+    array_push($arrInput[$i], $output);
+}
+
+$str =  join(' ', $output);
+echo $str;
 echo "<br>";
 ?>
 
