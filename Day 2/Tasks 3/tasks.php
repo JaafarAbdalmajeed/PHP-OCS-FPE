@@ -62,8 +62,6 @@ Expected Output: ‘Word Found!’ -->
     for($i = 0; $i < count($arrWords); $i++) {
         if($arrWords[$i] == $word) {
             echo "‘Word Found’";
-        } else {
-            echo "not Found’";
         }
     }
     
@@ -80,7 +78,23 @@ Expected Output: ‘Word Found!’ -->
 
 Sample Output: 'www.orange.com/index.php'
 Expected Output: 'index.php' -->
-<?php ?>
+<?php 
+echo "<br>";
+
+function extractName($url) {
+    $name = '';
+    $len = strlen($url) - 1;
+    for ($i = $len; $i > 0; $i--) {
+        if ($url[$i] == '/') {
+            $name = substr($url, $i + 1, $len); // Fix here
+            echo $name;
+            break;
+        }
+    }
+}
+extractName('www.orange.com/index.php');
+echo "<br>";
+?>
 
 
 
