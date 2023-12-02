@@ -33,7 +33,20 @@ d.	Make the first letter of each word capitalized. -->
 
 Sample Output: '085119'
 Expected Output: 08:51:19 -->
-<?php 
+
+<?php
+$numericString = '085119';
+
+// Extract hours, minutes, and seconds
+$hours = substr($numericString, 0, 2);
+$minutes = substr($numericString, 2, 2);
+$seconds = substr($numericString, 4, 2);
+
+// Format as time
+$timeFormat = "$hours:$minutes:$seconds";
+
+
+echo $timeFormat;
 ?>
 
 
