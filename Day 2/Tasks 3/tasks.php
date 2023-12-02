@@ -220,6 +220,9 @@ Sample Output: "Twinkle, twinkle, little star."
 Expected Result: array (4) {[0] => string (30) "Twinkle, " [1] => string (26) " twinkle," [2] => string (27) twinkle" [3] => string (26) " little star.”} -->
 <?php 
 echo "<br>";
+    $inputString = 'Twinkle, twinkle, little star';
+    $arrString = explode(',', $inputString);
+    var_dump($arrString);
 echo "<br>";
 ?>
 
