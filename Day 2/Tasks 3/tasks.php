@@ -293,6 +293,15 @@ Expected Output: '65722.24' -->
 
 <?php 
 echo "<br>";
+    $stringInput = '0000657022.24';
+    $stringOutput = '';
+for( $i = 0; $i < 0; $i++){
+if( intval($stringInput[$i]) > 0 ){
+    $stringOutput .= $stringInput[$i];
+} else if ( $stringOutput[$i] === '.' ){
+    $stringOutput .= $stringInput[$i];
+}
+print $stringOutput;
 echo "<br>";
 ?>
 
