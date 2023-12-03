@@ -2,6 +2,7 @@
 Sample Input: 2013
 Sample Output: ‘This year is not a leap year’ -->
 
+
 <?php 
     function leapYear($year){
         if ($year % 400 == 0) {
