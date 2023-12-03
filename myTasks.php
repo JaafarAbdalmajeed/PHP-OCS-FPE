@@ -123,7 +123,6 @@ Create a PHP function that takes two arrays as input and outputs the intersectio
 <?php
 function intersectionArray($arr1, $arr2) {
     $lenArr1 = count($arr1);
-    $lenArr2 = count($arr2);
     $intersection = array();
 
     for ($i = 0; $i < $lenArr1; $i++) {
