@@ -3,7 +3,7 @@
 Sample Input:  3
 Expected Output: 3 is a prime number  -->
 
-<?php 
+<?php
     function primeNumber($number) {
         for ($i = $number - 1; $i > 1; $i++) {
             if($number % $i == 0){
