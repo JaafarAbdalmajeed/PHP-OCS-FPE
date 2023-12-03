@@ -330,11 +330,9 @@ Expected Output: 'The quick brown fox jumps over the lazy dog' -->
 echo "<br>";
 $s1 = 'The quick brown fox jumps over the lazy dog---';
 
-for( $i = 0; $i < strlen($s1); $i++) {
-if( $s1[$i] == '-' ) {
-str_replace('-','', $s1[$i]);
-}
-}
+
+str_replace('-','', $s1);
+
 echo "<br>";
 ?>
 
@@ -385,11 +383,10 @@ Expected Output: 2543.12 -->
 
 <?php 
 echo "<br>";
-$input = '2,543.12';
 $len = strlen($input);
 
-    str_replace(',', '', $input );
-
+$input = '2,543.12';
+$input = str_replace(',', '', $input);
 echo $input;
 echo "<br>";
 ?>
