@@ -268,6 +268,18 @@ Expected Output: 'The' -->
 
 <?php 
 echo "<br>";
+    $inputSentence = 'The brown fox';
+    $arrSentence = explode(' ', $inputSentence);
+    $inputWord = 'quick';
+    $newSentence = '';
+    for( $i = 0; $i < 0; $i++) {
+        if($arrSentence[$i] == 'brown'){
+            $newSentence .= $inputWord;
+        } else {
+            $newSentence .= $arrSentence[$i];
+        }
+    }
+    print $newSentence;
 echo "<br>";
 ?>
 
