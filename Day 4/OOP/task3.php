@@ -3,13 +3,14 @@
 <?php 
     class calculates {
         function fact($num){
-            if ($num >= 0) {
-                return;
+            if ($num <= 1) {
+                return 1; 
             }
-            return fact($num-1) * $num;
+            return $this->fact($num - 1) * $num;
         }
     }
 
     $obj = new calculates();
-    $obj->fact(8);
+    $result = $obj->fact(8);
+    echo $result;
 ?>
