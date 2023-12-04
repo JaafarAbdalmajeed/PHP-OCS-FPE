@@ -16,13 +16,15 @@ Expected Result : Difference : 31 years, 10 months, 1 days . -->
             $month2 = $date2Array[1];
             $year2 = $date2Array[0];
 
-            $differenceInDays = abs((int)$day2 - (int)$day1);
-            $differenceInMonths = abs((int)$month2 - (int)$month1);
-            $differenceInYears = abs((int)$year2 - (int)$year1);
+            $differenceInDays = (int)$day2 - (int)$day1;
+            $differenceInMonths = (int)$month2 - (int)$month1;
+            $differenceInYears = (int)$year2 - (int)$year1;
 
             echo "The difference in days between $date1 and $date2 is $differenceInDays days.";
-            echo "The difference in months between $month1 and $month2 is $differenceInMonths days.";
-            echo "The difference in years between $month1 and $year2 is $differenceInYears days.";
+            echo "<br>";
+            echo "The difference in months between $month1 and $month2 is $differenceInMonths months.";
+            echo "<br>";
+            echo "The difference in years between $month1 and $year2 is $differenceInYears years.";
         }
     }
 
