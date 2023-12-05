@@ -30,17 +30,23 @@
             $name = $_POST['name'];
             $position = $_POST['position'];
             $salary = $_POST['salary'];
+            try {
+                $schemaStatement = $conn -> prepare("INSERT INTO employees (id, name, position, salary) VALUES (:id, :name, :position, :salary)");
+                $schemaStatement -> bindParam(':id', $id);
+                $schemaStatement -> bindParam(':name', $name);
+                $schemaStatement -> bindParam(':position', $position);
+                $schemaStatement -> bindParam(':salary', $salary);
+                if ($schemaStatement -> execute()) {
+                    echo 'successfully insert';
+                } else {
+                    echo 'no insert';
+                }
 
-            $schemaStatement = "INSERT INTO employees (id, name, position, salary)
-            VALUES ($id, $name, $position, $salary)";
-
-            $conn->exec($schemaStatement);
-            $conn = null;
+            } catch (PDOException $e) {
+                echo 'ERROR: '. $e->getMessage();
+            }
         }
-        
 
-    
-    
     ?>
 </body>
 </html>
