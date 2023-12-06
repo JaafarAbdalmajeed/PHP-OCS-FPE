@@ -66,6 +66,10 @@ input{
     border-radius: 10px;
 }
 
+label{
+    width: 80%;
+    margin: auto;
+}
 
 
 .btn{
