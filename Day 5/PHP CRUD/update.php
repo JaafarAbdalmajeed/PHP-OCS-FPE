@@ -7,9 +7,6 @@
 </head>
 <body>
     <form action="update.php" method="post">
-        <label for=""></label>
-        <input type="text" name="id" id="id" placeholder="enter id">
-
         <label for="name">name</label>
         <input type="text" name="name" id="name" placeholder="enter name">
 
@@ -25,7 +22,7 @@
     <?php 
         include 'db.php';
 
-        if($_SERVER["REQUEST_METHOD"] == 'POST') {
+        if(isset($_POST['id'])) {
             $id = $_POST['id'];
             $name = $_POST['name'];
             $position = $_POST['position'];
@@ -34,17 +31,8 @@
             
 
             try {
-                if ($id) {
-                    $schemaStatement = $conn -> prepare("UPDATE  employees SET id = :id");
-                    $schemaStatement -> bindParam(':id', $id);
-                    if ($schemaStatement -> execute()) {
-                        echo 'successfully insert';
-                    } else {
-                        echo 'no insert';
-                    }
-                }
                 if ($name) {
-                    $schemaStatement = $conn -> prepare("UPDATE  employees SET name = :name");
+                    $schemaStatement = $conn -> prepare("UPDATE  employees SET name = :name WHERE id = $id");
                     $schemaStatement -> bindParam(':name', $name);
                     if ($schemaStatement -> execute()) {
                         echo 'successfully insert';
@@ -53,7 +41,7 @@
                     }
                 } 
                 if ($position) {
-                    $schemaStatement = $conn -> prepare("UPDATE  employees SET position = :position");
+                    $schemaStatement = $conn -> prepare("UPDATE  employees SET position = :position WHERE id = $id");
                     $schemaStatement -> bindParam(':position', $position);
                     if ($schemaStatement -> execute()) {
                         echo 'successfully insert';
@@ -62,7 +50,7 @@
                     }
                 }
                 if ($salary) {
-                    $schemaStatement = $conn -> prepare("UPDATE  employees SET salary = :salary");
+                    $schemaStatement = $conn -> prepare("UPDATE  employees SET salary = :salary WHERE id = $id");
                     $schemaStatement -> bindParam(':salary', $salary);
                     if ($schemaStatement -> execute()) {
                         echo 'successfully insert';
