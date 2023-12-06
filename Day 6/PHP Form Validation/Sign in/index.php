@@ -20,10 +20,13 @@
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password">
             </div>
+
+            <div class="btn">
+                <input type="submit" value="Sign In" class="a">
+            </div>
         </form>
-        <div class="btn">
-            <a href="singIn.php" id="btnSingIn">Sign In</a>
-        </div>
+        
+        <div class="btnSingUp">Don't have an account?<a href="../Sing up/signUp.php"></a></div>
     </main>
     
 </body>
