@@ -45,7 +45,7 @@
             </div>
         </form>
 
-        <div class="btnSingIn">Do have an account?<a href="../Sing up/index.php"></a></div>
+        <div class="btnSingIn">Do have an account?<a href="../Sing up/index.php">Sign In</a></div>
     </main>
     
 </body>

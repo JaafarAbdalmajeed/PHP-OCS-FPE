@@ -26,7 +26,7 @@
             </div>
         </form>
         
-        <div class="btnSingUp">Don't have an account?<a href="../Sing up/signUp.php"></a></div>
+        <div class="btnSingUp">Don't have an account?<a href="../Sing up/signUp.php">Sign Up</a></div>
     </main>
     
 </body>

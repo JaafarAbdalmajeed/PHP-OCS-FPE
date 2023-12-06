@@ -10,13 +10,13 @@ body{
 }
 
 main{
-    width: 40%;
+    width: 50%;
     height: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    padding-bottom: 15px;
     background-color: #fcf8ff;
     
 }
@@ -66,18 +66,16 @@ input{
     border-radius: 10px;
 }
 
-label{
-    width: 80%;
-    margin: auto;
-}
+
 
 
 .btn{
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
     margin-bottom: 20px;
 }
 
@@ -85,7 +83,7 @@ label{
     margin: 10px;
     padding: 15px;
     border-radius: 30px;
-    background-color: aquamarine;
+    background-color: rgb(30, 0, 202);
     width: 80%;
     text-align: center;
     text-decoration: none;
@@ -99,6 +97,10 @@ label{
 
 #btnSingUp{
     background-color:rgb(255, 38, 0);
+}
+
+a{
+    text-decoration: none;
 }
 
 
