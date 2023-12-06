@@ -12,8 +12,8 @@
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, error nam laborum blanditiis ipsam illo sapiente excepturi fugiat nemo? Provident.</p>
         <img src="image/Capture.PNG" alt="">
         <div class="btn">
-            <a href="singIn.php" id="btnSingIn">Sign In</a>
-            <a href="signUp.php" id="btnSingUp">Sign Up</a>
+            <a href="../Sign in/index.php" id="btnSingIn">Sign In</a>
+            <a href="../Sign up/index.php" id="btnSingUp">Sign Up</a>
         </div>
     </main>
     
