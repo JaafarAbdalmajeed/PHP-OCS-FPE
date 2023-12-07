@@ -10,7 +10,7 @@
     <main class="welcome">
         <h1><strong>Hello There</strong></h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, error nam laborum blanditiis ipsam illo sapiente excepturi fugiat nemo? Provident.</p>
-        <form action="">
+        <form action="index.php" method="post">
             <div class="inputDiv">
                 <label for="fullName">Full Name</label>
                 <input type="text" name="fullName" id="fullName">
@@ -27,7 +27,7 @@
             </div>
 
             <div class="inputDiv">
-                <label for="password">Password</label>
+                <label for="Password">Password</label>
                 <input type="text" name="Password" id="Password">
             </div>
             <div class="inputDiv">
@@ -36,8 +36,8 @@
             </div>
 
             <div class="inputDiv">
-                <label for="dateOfBirth">Date of Birth</label>
-                <input type="text" name="dateOfBirth" id="dateOfBirth">
+                <label for="dateBirth">Date of Birth</label>
+                <input type="text" name="dateBirth" id="dateBirth">
             </div>
 
             <div class="btn">
@@ -50,3 +50,26 @@
     
 </body>
 </html>
+
+<?php 
+    include '../config/db.php';
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $fullName = $_POST['fullName'];
+        $email = $_POST['email'];
+        $mobile = $_POST['mobile'];
+        $password = $_POST['Password'];
+        $dateOfBirth = $_POST['dateBirth']; // Change this line
+
+        try {
+            $sql = $conn->prepare("INSERT INTO users (fullName, email, mobile, Password, dateBirth) VALUES (:fullName, :email, :mobile, :Password, :dateBirth)");
+            $sql->bindParam(":fullName", $fullName);
+            $sql->bindParam(":email", $email);
+            $sql->bindParam(":mobile", $mobile);
+            $sql->bindParam(":Password", $password);
+            $sql->bindParam(":dateBirth", $dateOfBirth); 
+            $sql->execute();
+        } catch (PDOException $e) {
+            echo "ERROR: " . $e->getMessage();
+        }
+    }
+?>

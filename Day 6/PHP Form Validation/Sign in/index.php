@@ -10,15 +10,15 @@
     <main class="welcome">
         <h1><strong>Hello There</strong></h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, error nam laborum blanditiis ipsam illo sapiente excepturi fugiat nemo? Provident.</p>
-        <form action="index" method="get">
+        <form action="index.php" method="post">
             <div class="inputDiv">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email">
             </div>
 
             <div class="inputDiv">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <label for="Password">Password</label>
+                <input type="password" name="Password" id="Password">
             </div>
 
             <div class="btn">
@@ -31,3 +31,33 @@
     
 </body>
 </html>
+
+<?php 
+    include '../config/db.php';
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $email = $_POST['email'];
+        $password = $_POST['Password'];
+
+        try {
+            
+            $sql = $conn->prepare('SELECT * FROM users WHERE email = :email');
+            $sql->bindParam(':email', $email);
+            $sql->execute();
+
+            $user = $sql->fetch(PDO::FETCH_ASSOC);
+
+            if ($user ) {
+                if($password === $user['Password']) {
+                    echo 'Success login';
+                    header("Location: ../pages/welcomeUser.php");
+                }
+
+            } else {
+                echo 'Invalid email or password';                
+            }
+        } catch (PDOException $e) {
+            echo 'ERROR: ' . $e->getMessage();
+        }
+    }
+?>
