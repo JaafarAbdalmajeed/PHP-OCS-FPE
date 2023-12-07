@@ -61,12 +61,13 @@
         $dateOfBirth = $_POST['dateBirth']; // Change this line
 
         try {
-            $sql = $conn->prepare("INSERT INTO users (fullName, email, mobile, Password, dateBirth) VALUES (:fullName, :email, :mobile, :Password, :dateBirth)");
+            $sql = $conn->prepare("INSERT INTO users (fullName, email, mobile, Password, dateBirth, role) VALUES (:fullName, :email, :mobile, :Password, :dateBirth, :role)");
             $sql->bindParam(":fullName", $fullName);
             $sql->bindParam(":email", $email);
             $sql->bindParam(":mobile", $mobile);
             $sql->bindParam(":Password", $password);
             $sql->bindParam(":dateBirth", $dateOfBirth); 
+            $sql->bindParam(":role", 0); 
             $sql->execute();
         } catch (PDOException $e) {
             echo "ERROR: " . $e->getMessage();

@@ -14,11 +14,17 @@
             <div class="inputDiv">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email">
+                <?php function msgErrorEmail() {
+                    echo 'invalid email';
+                } ?>
             </div>
 
             <div class="inputDiv">
                 <label for="Password">Password</label>
                 <input type="password" name="Password" id="Password">
+                <?php function msgErrorPass() {
+                    echo 'invalid password';
+                } ?>
             </div>
 
             <div class="btn">
@@ -38,6 +44,21 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $email = $_POST['email'];
         $password = $_POST['Password'];
+
+
+        if (preg_match('/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/', $email)) {
+            echo "Valid email address";
+        } else {
+            msgErrorEmail();
+        }
+
+        if (preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/', $password)) {
+            echo "Valid password";
+        } else {
+            msgErrorPass();
+        }
+
+        
 
         try {
             
