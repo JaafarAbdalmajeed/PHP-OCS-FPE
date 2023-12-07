@@ -58,8 +58,37 @@
         $email = $_POST['email'];
         $mobile = $_POST['mobile'];
         $password = $_POST['Password'];
+        $passwordConfirmation = $_POST['passwordConfirmation'];
         $dateOfBirth = $_POST['dateBirth']; 
 
+        if (!preg_match('/^[A-Za-z\s]+$/', $fullName)) {
+            $msg = 'invalid fullName';
+            msgError($msg);
+        }
+
+        if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $dateOfBirth)) {
+            $msg = 'invalid dateOfBirth';
+            msgError($msg);
+        }
+
+        if (!preg_match('/^\d{3}-\d{3}-\d{4}$/', $mobile)) {
+            $msg = 'invalid mobile';
+            msgError($msg);
+        }
+
+        if (!preg_match('/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/', $email)) {
+            $msg = 'invalid email';
+            msgError($msg);
+        }
+
+        if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/', $password)) {
+            $msg = 'invalid password';
+            msgError($msg);
+        }
+        if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/', $passwordConfirmation)) {
+            $msg = 'invalid passwordConfirmation';
+            msgError($msg);
+        }
         try {
             $sql = $conn->prepare("INSERT INTO users (fullName, email, mobile, Password, dateBirth, role) VALUES (:fullName, :email, :mobile, :Password, :dateBirth, :role)");
             $sql->bindParam(":fullName", $fullName);
