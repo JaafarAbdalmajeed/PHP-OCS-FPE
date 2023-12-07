@@ -58,7 +58,7 @@
         $email = $_POST['email'];
         $mobile = $_POST['mobile'];
         $password = $_POST['Password'];
-        $dateOfBirth = $_POST['dateBirth']; // Change this line
+        $dateOfBirth = $_POST['dateBirth']; 
 
         try {
             $sql = $conn->prepare("INSERT INTO users (fullName, email, mobile, Password, dateBirth, role) VALUES (:fullName, :email, :mobile, :Password, :dateBirth, :role)");

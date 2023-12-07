@@ -67,13 +67,13 @@
             $sql->execute();
 
             $user = $sql->fetch(PDO::FETCH_ASSOC);
-
-            if ($user ) {
-                if($password === $user['Password']) {
-                    echo 'Success login';
+            
+            if ($user && $password === $user['Password']) {
+                if ($user['role'] === '1') {
+                    header("Location: ../pages/welcomeAdmin.php");
+                } else {
                     header("Location: ../pages/welcomeUser.php");
                 }
-
             } else {
                 echo 'Invalid email or password';                
             }
