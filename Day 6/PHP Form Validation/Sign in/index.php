@@ -10,7 +10,7 @@
     <main class="welcome">
         <h1><strong>Hello There</strong></h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, error nam laborum blanditiis ipsam illo sapiente excepturi fugiat nemo? Provident.</p>
-        <form action="">
+        <form action="index" method="get">
             <div class="inputDiv">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email">
