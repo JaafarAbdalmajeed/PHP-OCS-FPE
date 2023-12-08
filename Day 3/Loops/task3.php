@@ -12,11 +12,14 @@ E E E E E -->
     $arr = array('A','B', 'C', 'D', 'E');
     $len = count($arr);
     for ($i = 0; $i < $len; $i++) {
-        for ($j = $len; $j > $i-1; $j--) {
+        for ($j = $len-1; $j > $i; $j--) {
+            if($i === $len-1){
+                break;
+            }
             echo ' A ';
         }
 
-        for ($j = 0; $j <= $i; $j++) {
+        for ($j = 0; $j < $i+1; $j++) {
             echo ' ' .$arr[$i]. ' ';
         }
         echo '<br>';
